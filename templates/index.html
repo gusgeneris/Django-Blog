@@ -34,7 +34,26 @@
             <!-- Divider-->
             <hr class="my-4" /> {% endfor %}
             <!-- Pager-->
-            <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
+            <div class="mb-4 d-inline-block">
+                {% if posts.has_previous %}
+                <div class="clearfix">
+
+                    <a class="btn btn-primary float-left" href="?page={{posts.previous_page_number}}">Anterior</a>
+
+                </div>
+                {% endif %}
+                
+            </div>
+            <div class="mb-4 d-inline-block">
+                {% if posts.has_next %}
+                <div class="clearfix ">
+
+                    <a class="btn btn-primary pull-right" href="?page={{posts.next_page_number}}">Siguiente</a>
+
+                </div>
+                {% endif %}
+                
+            </div>
         </div>
     </div>
 </div>

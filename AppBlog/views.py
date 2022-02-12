@@ -1,12 +1,20 @@
 from django.shortcuts import render
 from .models import *
 
+from django.core.paginator import Paginator #gestoe de paginacion
+
 # Create your views here.
 
 def Home (request):
     
     posts = Post.objects.filter(estado=True)
     categorias = Categoria.objects.all()
+    
+    paginator= Paginator(posts,2)
+    
+    page = request.GET.get('page')
+    
+    posts = paginator.get_page(page)
     
     return render(request,'index.html',{'posts': posts,'categorias':categorias})
 
