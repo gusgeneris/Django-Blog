@@ -1,1 +1,1 @@
-web: gunicorn AppBlog.wsgi
+web: gunicorn app:app
