@@ -1,1 +1,2 @@
-web: gunicorn ProyectoBlog.wsgi
+
+web: gunicorn AppBlog.wsgi
