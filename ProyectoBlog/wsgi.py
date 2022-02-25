@@ -15,5 +15,3 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ProyectoBlog.settings')
 
 application = get_wsgi_application()
 
-from whitenoise.django import DjangoWhiteNoise
-application = DjangoWhiteNoise(application)
