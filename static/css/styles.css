@@ -389,6 +389,10 @@ textarea {
     line-height: inherit;
 }
 
+header-contact {
+    background-image: url('../assets/img/contact-bg.jpg')
+}
+
 button,
 select {
     text-transform: none;
